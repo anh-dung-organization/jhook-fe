@@ -22,9 +22,11 @@ node {
     }
 
    stage('Run application ') {
+        withCredentials([file(credentialsId: 'ssh-key', variable: 'ssh_key_file')]) {
             sh 'cat $ssh_key_file > key'
             sh 'chmod 400 key'
             sh "ssh -o StrictHostKeyChecking=no -i key cicd@34.1.207.215 ' cd jhook-fe && npm run dev'"
+        }
     }
     stage('Results') {
         println(' >> Result')
