@@ -8,6 +8,7 @@ node {
             sh 'chmod 400 key'
             //sh "ssh -o StrictHostKeyChecking=no -i key cicd@34.1.207.215 ' git clone https://github.com/anh-dung-organization/jhook-fe.git'"
             //sh "ssh -o StrictHostKeyChecking=no -i key cicd@34.1.207.215 'cd jhook-fe && git pull'"
+            println("Con Me No")
         }
         
     }
