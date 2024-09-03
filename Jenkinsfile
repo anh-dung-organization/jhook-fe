@@ -17,6 +17,7 @@ node {
             sh 'chmod 400 key'
             sh "ssh -o StrictHostKeyChecking=no -i key cicd@34.1.207.215 'node -v && npm -v'"
             sh "ssh -o StrictHostKeyChecking=no -i key cicd@34.1.207.215 'cd jhook-fe && npm install'"
+            sh "ssh -o StrictHostKeyChecking=no -i key cicd@34.1.207.215 'cd jhook-fe && npm run build'"
         }
        
     }
