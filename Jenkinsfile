@@ -16,7 +16,7 @@ node {
             sh 'cat $ssh_key_file > key'
             sh 'chmod 400 key'
             sh "ssh -o StrictHostKeyChecking=no -i key cicd@34.1.207.215 'node -v && npm -v'"
-            sh "ssh -o StrictHostKeyChecking=no -i key cicd@34.1.207.215 'npm install -f'"
+            sh "ssh -o StrictHostKeyChecking=no -i key cicd@34.1.207.215 'npm install'"
         }
        
     }
