@@ -1,5 +1,5 @@
 node {
-    stage('Clone source code 1') { // for display purposes
+    stage('Clone source code 12') { // for display purposes
         withCredentials([file(credentialsId: 'ssh-key', variable: 'ssh_key_file')]) {
             // println(ssh_key_file)
             // writeFile(file: 'test.txt', text: ssh_key_file)
